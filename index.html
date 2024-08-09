@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador de texto</title>
+</head>
+
+<body>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <header>
+        <img src="./assets/logo.svg" alt="" class="logo" width="25px">
+    </header>
+    <main class="encriptador-texto">
+        <section class="area__encriptar">
+            <div class="buttons">
+                <button class="btn-encriptador" onclick="mensajeEncriptado()">Encriptar</button>
+                <button class="btn-desencriptador" onclick="mensajeDesencriptado()">Desencriptar</button>
+            </div>
+            <div class="contener-texto">
+                <textarea class="text-area" cols="30" rows="6" placeholder="Ingresa el texto a encriptar"></textarea>
+                <h6 class="sugerencia"><i class='bx bxs-error-circle' style='color:#e45f2b'></i>Solo minusculas y sin acento</h6>
+                <div class="content-redes">
+                    <a class="redes" href="https://www.facebook.com/profile.php?id=100007216878289"><i class='bx bxl-facebook-circle' style='color:#f6c445'></i>Facebook</a>
+                    <a class="redes" href="https://github.com/Dark-ss"><i class='bx bxl-github' style='color:#f6c445'></i>Github</a>
+                    <a class="redes" href="https://www.linkedin.com/in/juan-camilo-calderon-db"><i class='bx bxl-linkedin-square' style='color:#f6c445'></i>LinkedIn</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <textarea class="mensaje" cols="20" rows="10"></textarea>
+            <div>
+                <button class="btn-copiar" onclick="copiar()">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:wght@100&display=swap');
+
+:root {
+    --color-primario: rgb(16, 0, 49);
+    --color-secundario: rgb(246, 196, 69);
+    --color-terciario: rgb(228, 95, 43);
+    --color-hover: rgba(29, 3, 78, 0.87);
+    --color-button: rgb(114, 250, 147);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-primario);
+    font-family: "inter";
+    font-weight: 400px;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+body{
+    box-sizing: border-box;
+}
+
+.logo {
+    padding-top: 2%;
+    margin-left: 2%;
+    width: 2%;
+}
+
+main {
+    display: flex;
+    margin-bottom: 2%;
+    margin-left: 5%;
+}
+
+.area__encriptar{
+    display: flex;
+}
+
+.text-area {
+    border-radius: 10px;
+    border: none;
+    background-color: #F6F6F6;
+    margin-top: 10%;
+    text-transform: lowercase;
+    padding: 3%;
+}
+
+::placeholder {
+    color: var(--color-primario);
+}
+
+.text-area:focus {
+    outline: none;/*quita linea de margen*/
+}
+
+.mensaje {
+    background: #F6F6F6;
+    background-image: url(./assets/cifr.png);
+    border: none;
+    border-radius: 24px;
+    background-repeat: no-repeat;/*no se repite*/
+    margin-left: 7%;
+    margin-top: 3.5%;
+    padding-left: 2%;
+    position: fixed;/*que se desplaze por pantalla*/
+}
+
+.mensaje:focus {
+    outline: none;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 7%;
+    margin-right: 2%;
+    gap: 20px;
+}
+
+.btn-encriptador {
+    background-color: var(--color-secundario);
+    border: 4px inset var(--color-secundario);
+    border-radius: 20px;
+    cursor: pointer;/*cambiar el puntero*/
+    height: 12%;
+    width: 100%;
+    font-size: 25px;
+    padding: 2% 0% 2% 0%;
+}
+
+.btn-desencriptador {
+    background-color: var(--color-terciario);
+    border: 4px inset var(--color-terciario);
+    border-radius: 20px;
+    cursor: pointer;/*cambiar el puntero*/
+    height: 12%;
+    width: 100%;
+    font-size: 25px;
+    padding: 2% 0% 2% 0%
+}
+
+.btn-copiar {
+    background-color: var(--color-button);
+    border: 4px inset var(--color-button);
+    border-radius: 20px;
+    cursor: pointer;/*cambiar el puntero*/
+    height: 12%;
+    width: 25%;
+    position: absolute;
+    margin-left: 8.3%;
+    margin-top: 33%;
+}
+
+.sugerencia{    
+    flex-direction: column-reverse;
+    color: rgba(245, 239, 239, 0.575);
+    font-size: 18px;
+    gap: 24px;
+}
+
+.content-redes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+}
+
+.redes{
+    width: 50%;
+    display: flex;
+    color: #F6F6F6;
+    text-align: center;
+    padding: 2% 0;
+    margin-top: 10%;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-radius: 10px;
+    font-family: "inter";
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border: 4px inset var(--color-secundario);
+    transition: transform 0.5s ease;
+}
+
+.redes:hover{
+    background-color: var(--color-hover);
+    border: 4px inset var(--color-terciario);
+    transform: scale(1.2);
+}
+
+@media (max-width: 1200px) {
+    .encriptador-texto{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .mensaje{
+        position: relative;
+        margin-left: 25%;
+    }
+
+    .btn-copiar{
+        margin-left: 27%;
+        position: relative;
+        margin: 0% 30% 0%; 
+    }
+}
+
+@media (max-width: 625px) {
+
+    .mensaje{
+        margin-left: 40%;
+    }
+    .btn-copiar{
+        margin-left: 54%;
+    }
+    
+    .encriptador-texto{
+        width: 100%;
+        padding: 0% 20% 0% 0%;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .mensaje {
+        margin-left: 70%;
+    }
+
+    .btn-copiar {
+        margin-left: 90%;
+        width: 50%;
+    }
+
+    .encriptador-texto {
+        width: 100%;
+        padding: 0% 100% 0% 0%;
+    }
+
+    .buttons{
+        margin-top: 14%;
+        margin-right: 4%;
+    }
+}
